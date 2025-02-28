@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revision JS</title>
+</head>
+<body>
+    <script>
+
+// alert("hello world")
+
+
+//data types of js
+
+// 1) string "", 
+// 2) float (Decimal point value)
+// 3)integer (number data)
+// 4)undefined
+
+
+
+// value assigned or print kar na ka lia 
+//1 let 
+//2 var 
+//3 const
+//4 document.write
+//5 alert
+//6 console.log
+//7 prompt (user sa input la na ka lia)
+
+// Explanation 
+
+//1 let (update variable and does not used one and another same variable store )
+
+//2 var (old variable and used  variable store )
+
+//3 const (only constant value store and this value never change valve ex (pi,times,gravity) )
+
+//4 document.write (This is used to Print any things in chrome page)
+
+//5 alert (print a message alert in popup form )
+
+//6 consol.log (print in chrome console)
+
+//7 prompt (user sa input lana ka lia )
+
+// prompt about information 
+
+// prompt by default string data type used karta ha 
+// prompt ma string ko number ma convert kar na kalia 3 tariqa ha 
+// 1 +prompt('3')
+// 2 number(prompt('3'))
+// paeseInt(prompt('3'))
+
+
+
+
+// decleration and initilazition conditions
+
+// let information;                    (decteration form)
+// information = "your self about"     (initilazation form)
+//document.write(information)           (print kar na ka lia )
+
+//Types of function 
+//there are two types of functions 
+//1) Builtin function            (Computer already known this function)
+//2) user defined function         (User defined this function )
+
+
+//two types of function 
+// hard coaded ("")
+//dynamic coaded()
+
+
+
+//BODMAS AND DMAS rules
+
+// let eq = 2 * 2 + 2 - 2 * 4 + ( 10 - 5 ) 
+// document.write(eq)
+
+
+
+// shorts cuts 
+
+//  /n (new line)
+//  /t (next tab)
+//  <br> (line brake)
+// <table> (table in html forms)
+  
+
+
+//Tamplate literals 
+// multiple line code is ma lik sak ta ha 
+//document.write(`my name is $ {fgdf} <br> ssdf `)
+
+
+
+// Two types of operator 
+//1) familear orerator 
+//2) un familear operator 
+
+//1) + , - , * , /  (are familear orerator)
+//2)  (un familear operator ) 
+
+// sub ma ( 1 ) add hoga
+// ++num (pre increment)  (start ma add kara ga) 
+// num++ (post increment) (end ma add kara ga)
+
+// --num (pre decrement)  (start ma substract kara ga)
+// num-- (post decrement) (end ma substract kara ga) 
+
+
+
+ // False and True values
+ 
+// false value 
+
+//  1 NaN
+//  2 ""
+//  3 false 
+//  4 0 
+//  5 un defined
+//  6 null
+
+// true value (false value ka ilawa sub true value ha)
+
+
+// Types of operator 
+
+// there are two types of opertor 
+// 1) && (and operator)  {all condition are true and work}  
+// 2) || (or operator)   {any one condition are true and work}
+
+
+
+
+//comparision orprators 
+ 
+// >    (Greaterthan operator)
+// <    (Lessthan operator)
+// >=   (Greaterthen and equals to operator)
+// <=   (Lessthan and equals to operator)
+// ==   (equals to (only value check)operator)
+// !=   (Not equals to operator)
+// !==  (Strickly not equals to operator)
+// ===  (Strickly equals to (data type and value dono check kara ga)operator)
+// =    (Assignment operator)
+
+
+// (if) and (else) and (ifelse) statements
+
+// 1) if (80 > 90){ document.write("true") }  (condition true ho gi tu true print ho ga)
+// 2) else {document.write ("false") }        (condition wrong ho gi tu false print ho ga)
+
+
+
+// Array
+
+//Index  (0 sa counting start hoti ha)
+//length (1 sa counting start hoti ha)
+
+//array is collection of data 
+
+//writing method 
+
+// let student = ['abbas','19','abbas@gmail.com','032138894']
+// document.write(student[0])
+
+// Array method
+
+//there are 6 types of array method
+// 1 push     (elements add in last )
+// 2 pop      (element remove in last)
+// 3 shift    (element remove in first)
+// 4 un shift (element add in first)
+// 5 splice   (Add or remove element first and last and middle)
+// 6 slice    {copy element (it take two parameter [1(index),1(length)] )}
+
+// let fruit = ['mango','banana','apple']
+
+// fruit.push('kivi','pineapple')
+// fruit.pop()
+// fruit.shift()
+// fruit.unshift('graps')
+// fruit.splice(2,3)
+// var copy = fruit.slice(0,2)
+// document.write(fruit)
+
+
+// upper case and lower case
+
+/*
+let userName = prompt('enter your name')
+let firstWord = userName.slice(0,1).toUpperCase()
+let remainWord = userName.slice(1).toLowerCase()
+let fullName = firstWord + remainWord
+
+if(fullName == 'Abbas'){
+    document.write('the value iscrroct')
+}
+else{
+    document.write('the value is incrroct')
+}
+*/
+
+
+
+
+// Nasted (multiple statement)
+
+
+// let input1 = prompt("enter number 1")
+// let input2 = prompt("enter number 2")
+
+// if (input1 == 10){if(input2 == 20){alert('statement is true')}}
+// else {alert('statement is false')}
+
+// Loops
+
+//three basic types of loop
+// 1) For loop   2) Nested loop  3) while loop 4) dowhile loop 
+/*
+
+*) for loop variable > 1) flag loop 2)boolen loop 3)arraylength 4)Breaks 
+
+1) for loop
+
+ writing pattren
+
+let name = ['abbas','ali','hamza','kamran']
+for (i=0; i < name.length; i++){
+    document.write(name[i] + '<br>')}
+
+*/
+
+// 1) flag  loop (if condition are apply and value is decleration)
+/*
+let carBrand = ['BMW','AUDI','MAHRAN','KHABER','COROLLA']
+let selectCar = prompt('Enter a car')
+let match = false
+
+for(let i=0; i < carBrand.length; i++){
+    if(selectCar == carBrand[i]){
+        match = true;
+        document.write(`${selectCar} car is avilable`)
+        break
+
+    }
+}
+if(match==false){
+    document.write(`${selectCar} car is not avilable`)
+    
+}
+*/
+
+//2)boolen loop (true or false condition)
+
+// True or false 
+
+
+// 3)arraylength (check array length and print)
+
+//let carBrand = ['BMW','AUDI','MAHRAN','KHABER','COROLLA']
+//for(let i=0; i < carBrand.length; i++)
+
+
+//4)Breaks (check element and it find the element and break the function)
+
+/*
+for(let i=0; i < carBrand.length; i++){
+    if(selectCar == carBrand[i]){
+        match = true;
+        document.write(`${selectCar} car is avilable`)
+        break
+}
+
+*/
+
+/*
+2) Nested loop (condition ka ander condition)
+
+
+
+let name = ['abbas','hamza','kamran','ali'] 
+
+for (let i=0; i < name.length; i++){
+    for(let j=0; j < name.length; j++){
+        document.write(name[j] + '<br>')
+    }
+    document.write('<br>')}
+
+*/
+
+
+
+// Date and time   Sun Feb 23 2025 19:44:04 GMT+0500 (Pakistan Standard Time)
+
+
+/*
+let date = new Date()
+document.write(date)
+*/
+
+
+
+
+// Function 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop practice</title>
+</head>
+<body>
+    <script>
+
+// Loop and array 
+
+ /*
+ let firstName = ['Abbas','Muhammad','Ali','Kashif','Kamran','Kamil']
+for (let i=0; i < firstName.length; i++){
+    document.write(firstName[i]+'<br>')}
+*/
+
+/* odd number or even number
+
+for(let i=0; i <= 100 ; i=i+2){
+    document.write([i]+'<br>')}
+
+*/
+
+//Nested loop
+
+/*
+1
+12
+123
+1234
+12345
+*/
+
+/*
+for (let i=1; i <= 5 ;i++){
+        for(let j=1; j<=i;j++){
+            document.write(j +'')
+        }
+    document.write('<br>')
+}
+*/
+
+
+
+
+// Mobile Brand program
+/*
+let mobileBrand = ['oppo','redmi','samsung','motorolla','infinix','apple']
+let userInput = prompt('Enter mobile Brand Name')
+let match=false
+
+for (let i=0; i < mobileBrand.length; i++){
+    if(userInput == mobileBrand[i]){
+        match=true
+        document.write(`${userInput} mobile is avilable`)
+        break;
+    }
+}
+
+if(match==false){
+    document.write(`${userInput} mobile is not avilable`)
+
+}
+*/
+
+
+
+// Medican shop program
+
+/*
+let medican = ['panadol','augmentin','brofin','calpol','batnisol']
+let user = prompt('Enter required medican')
+let match=false
+
+for(let i=0; i < medican.length; i++){
+   if(user == medican[i]){
+    match=true
+    alert(`${user} is avilable`)
+    break  
+   }   
+        
+}
+
+if(match==false){
+    alert(`${user} is not avilable`)
+}
+*/
+   
+   
+//house member
+/*
+let name = ['abbas','shakil','maaz','ayesha']
+let input = prompt('enter a name')
+let match = false 
+
+for (let i=0; i < name.length; i++){
+    if(input==name[i]){
+        match=true
+        alert(`${input} is avilable`)
+        break
+    }
+}
+if (match==false){
+    alert(`${input} is not avilable`)
+}
+*/
+
+
+
+//city program
+/*
+let cityName = ['orangi','malir','nazmabad','sadar','karachi']
+let inputCity = prompt('enter a city name')
+match = false 
+
+for (let i=0; i < cityName.length; i++){
+    if(inputCity==cityName[i]){
+        match=true
+        alert(`${inputCity} is a cleanest city in pakistan`)
+        break 
+    }
+}
+
+if(match==false){
+    alert(`${inputCity} is a average city in pakistan `)
+}
+*/
+ 
+// upper case and lower case
+/*
+let userName = prompt('enter your name')
+let firstWord = userName.slice(0,1).toUpperCase()
+let remainWord = userName.slice(1).toLowerCase()
+let fullName = firstWord + remainWord
+
+if(fullName == 'Abbas'){
+    document.write('the value iscrroct')
+}
+else{
+    document.write('the value is incrroct')
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main{
+            margin: auto;
+            border: 2px solid rgb(124, 124, 124);
+            height: 70vh;
+            width: 30%;
+            text-align: center;
+            padding: 3%;
+            border-radius: 30px;
+            background-color:black;
+        }
+        div > .input > input{
+            width: 100%;
+            height: 8vh;
+            border-radius: 10px;
+            border: none;
+            background-color: rgb(24, 24, 24);
+            font-size:40px;
+            color: white;
+            font-family: Calibri Light (Headings);
+            font-weight: lighter;
+            text-align: right;
+            padding-right: 10px;
+            letter-spacing: 0.2cap;
+        }
+        div > .btn > button{
+            height:70px;
+            width: 20%;
+            padding:10px;
+            margin-top: 55px;
+            margin-left: 15px;
+            border-radius:20vh;
+            font-size: 25px;
+            border: none;
+            color: white;
+
+        }
+       
+    </style>
+
+
+</head>
+<body>
+
+<div class="main">
+
+  <div class="input">
+  <input readonly type="text" name="" id="inp">
+  </div>
+
+  <div class="btn">
+    <button onclick="clrall()" style="background-color: rgb(170, 168, 168);">C</button>
+    <button onclick="btnClick('+')" style="background-color: rgb(170, 168, 168);">+/-</button>
+    <button onclick="btnClick('%')" style="background-color: rgb(170, 168, 168);">%</button>
+    <button onclick="btnClick('/')" style="background-color: orange;">/</button><br>
+    <button onclick="btnClick(7)" style="background-color: rgb(77, 76, 76);" >7</button>
+    <button onclick="btnClick(8)" style="background-color: rgb(77, 76, 76);">8</button>
+    <button onclick="btnClick(9)" style="background-color: rgb(77, 76, 76);">9</button>
+    <button onclick="btnClick('*')" style="background-color: orange;">X</button><br>
+    <button onclick="btnClick(4)" style="background-color: rgb(77, 76, 76);">4</button>
+    <button onclick="btnClick(5)" style="background-color: rgb(77, 76, 76);">5</button>
+    <button onclick="btnClick(6)" style="background-color: rgb(77, 76, 76);">6</button>
+    <button onclick="btnClick('-')" style="background-color: orange;">-</button><br>
+    <button onclick="btnClick(1)" style="background-color: rgb(77, 76, 76);">1</button>
+    <button onclick="btnClick(2)" style="background-color: rgb(77, 76, 76);">2</button>
+    <button onclick="btnClick(3)" style="background-color: rgb(77, 76, 76);">3</button>
+    <button onclick="btnClick('+')" style="background-color: orange;">+</button><br>
+    <button onclick="btnClick(0)" style="width: 45%; background-color: rgb(77, 76, 76);">0</button>
+    <button onclick="btnClick('.')" style="background-color: rgb(77, 76, 76);">.</button>
+    <button onclick="eq()" style="background-color: orange;">=</button>
+   </div>
+
+
+</div>
+
+    
+
+
+
+
+
+    <script>
+
+function btnClick(a){
+  
+    let getinp = document.getElementById("inp")
+    getinp.value += a
+
+}
+function eq(){
+    var getInp = document.getElementById('inp')
+    getInp.value = eval(getInp.value)
+}
+
+function clrall(){
+    var getInp = document.getElementById('inp')
+    getInp.value = ''
+}
+
+function clr(){
+    var getInp = document.getElementById('inp')
+    getInp.value = getInp.value.slice(0,-1)
+}
+
+
+
+    </script>
+</body>
+</html>
