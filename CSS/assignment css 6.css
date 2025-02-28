@@ -1,0 +1,173 @@
+/* navbar start  */
+
+
+.navbar{
+    height: 70px;
+    width: 99%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    
+}
+.navbar > div > a{
+    text-decoration: none;
+    color: black;
+    font-size: large;
+    margin-left:45px ;
+   padding: 10px;
+    
+   
+
+}
+.button1{
+    margin-right: 10px;
+    width: 10%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-size: larger;
+
+}
+.navbar > div > h2{
+   
+    font-family: Forte;
+    font-size: 35px;
+}
+
+/* body work start   */
+
+#para1{
+    height: 450px;
+    width: 40%;
+    /* border: 2px solid black; */
+    position: absolute;
+    left: 12%;
+    top: 20%;
+}
+#para1 > h1 {
+    font-size:50px;
+}
+#para1 > p {
+    font-size: x-large;
+}
+#para1 > button {
+    width: 30%;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: large;
+    
+}
+
+#img{
+   position: absolute;
+   left: 60%;
+   height: 400px;
+   width: 30%;
+   top: 20%;
+}
+.main1{
+    font-size: larger;
+    text-align: center;
+    /* border: 2px solid black;
+    height: 250px;
+    width: 30%; */
+    display: flex;
+    margin-top: 40%;
+    justify-content: space-around;
+
+    
+}
+#div1{
+    
+    border: 2px solid black;
+    height: 250px;
+    width: 30%;
+    border-radius: 9px;
+}
+
+#main2{
+    font-size: x-large;
+    text-align: center;
+    /* border: 2px solid black;
+    height: 250px;
+    width: 30%; */
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.div2{
+    
+    border-radius: 9px;
+    height: 300px;
+    width: 35%;
+    
+    
+}
+
+.h1{
+    text-align: center;
+    font-size: 70px;
+}
+
+.main3{
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+
+     
+}
+.div3{
+    
+    height: 350px;
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 9px;
+    
+}
+
+.main4{
+    font-size: x-large;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+     
+}
+.div4{
+    
+    height: 350px;
+    width: 30%;
+    border: 2px solid black;
+    border-radius: 9px;
+    
+}
+
+.main5{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10%;
+    font-size: x-large;
+    justify-content: space-between;
+
+}
+.button2{
+    margin-top: 50px;
+
+}
+.button2 > input {
+    height: 40px;
+    width: 90%;
+    font-size: large;
+}
+
+.button2 > button{
+    position: relative;
+    bottom: 40px;
+    left:70% ; 
+    height: 30px;
+    background-color: black;
+    color: white;
+
+}

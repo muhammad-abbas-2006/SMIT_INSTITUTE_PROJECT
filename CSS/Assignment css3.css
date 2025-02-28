@@ -1,0 +1,35 @@
+
+ body{
+    background-color:purple;
+} 
+.h1{
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    text-shadow: 10px 10px 10px 10px black;
+}
+
+label{
+    color: whitesmoke;
+}
+input{
+    height: 30px;
+    border-radius: 10px  ;
+}
+    
+
+.button{
+
+    height: 80px;
+    width: 30%;
+    background-color: whitesmoke;
+    color: purple;
+    border-radius: 3px solid black;
+}
+.button:hover{
+
+    color: whitesmoke;
+    background-color: purple;
+    transform: 5px;
+    transition: ease-in-out;
+}

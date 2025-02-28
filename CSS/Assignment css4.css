@@ -1,0 +1,53 @@
+.img1{
+    height: 800px;
+    position: absolute;
+    top:7% ;
+    left: 23%;
+}
+
+.login{
+    position: absolute;
+    top:25% ;
+    left: 50%;
+    text-align: center;
+    width: 20%;
+
+}
+.form > input{
+
+    border-radius: 6px;
+    width: 80%;
+    height: 30px;
+}
+.form > button{
+
+    width: 80%;
+    height: 30px;
+    border-radius: 6px;
+    background-color: rgb(11, 108, 173);
+    color: whitesmoke;
+}
+.div{
+    
+    border: 1px solid black;
+    margin:6px;
+    padding: 30px;
+    
+}
+
+.form > div {
+
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+
+.div2{
+    margin-top: 60%;
+    text-align: center;
+    word-spacing: 8px;
+    
+}
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+}

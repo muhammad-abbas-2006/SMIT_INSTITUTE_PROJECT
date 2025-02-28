@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        
+        @media screen and (min-width:901px) {
+            .div1 > button {
+            position: relative;
+            left:55%;
+            width: 80%;
+            height: 40px;
+            border-radius: 27px;
+            color: black;
+            background-color: purple;
+            font-weight: bolder;
+        } 
+        }
+
+        @media screen and (max-width:900px) {
+            .div1 > button {
+            position: relative;
+            left:55%;
+            width: 80%;
+            height: 40px;
+            border-radius: 27px;
+            color: rgb(124, 4, 4);
+            background-color: rgb(0, 0, 0);
+            font-weight: bolder;
+        }
+        }
+         body{
+            background-color: purple;
+        } 
+        .div1 > h1{
+            position: relative;
+            left: 50%;
+        }
+        .div1{
+            background-color: whitesmoke;
+            position: absolute;
+            top: 20%;
+            left: 40%;
+            padding-right:15% ;
+            padding-left: 2%;
+            height: 60%;
+            border-radius: 10px;
+            box-shadow:10px 10px 5px 10px black ;
+            
+        }
+         
+        .div1 > label {
+            color: purple;
+            font-size: x-large;
+
+        }
+        .div1 > input{
+            width: 160%;
+            height: 40px;
+            border-radius: 10px;
+        }
+        
+        .div1 > button:hover{
+            color: purple;
+            background-color: whitesmoke;
+            
+        }
+        
+            
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <h1>SIGN IN</h1>
+        <label for="">First Name</label><br><br>
+        <input type="text" placeholder="Enter your First Name"><br><br>
+
+        <label for="">Last Name</label><br><br>
+        <input type="text" placeholder="Enter your last Name"><br><br>
+
+        <label for="">Email</label><br><br>
+        <input type="text" placeholder="Enter Your Email"><br><br>
+
+        <label for="">Password</label><br><br>
+        <input type="text" placeholder="Enter your Password"><br><br><br>
+
+        <button>LogIn</button>
+
+        <p>Login your account an google? <a href="#">SignIn</a> </p>
+
+
+
+
+    </div>
+    
+</body>
+</html>
