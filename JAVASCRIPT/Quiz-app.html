@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body{
+        background-color: #add8e6;
+background-image:radial-gradient()(147deg, #add8e6 0%, #fffafa 74%);
+
+      }
+      .quiz-box {
+        max-width: 600px;
+        margin: 10% auto;
+        background: rgb(237, 243, 243);
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 10px 5px 5px gray;
+      }
+      .question {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+      }
+      .option label {
+        cursor: pointer;
+      }
+      .btn{
+        width: 100%;
+        transition: ease-in-out;
+        transition-duration: 0.2s;
+      }
+      .btn:hover{
+        color: black;
+        background-color: white;
+      }
+      .head{
+        color: whitesmoke;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        margin-top: 4%;
+      }
+      .head{
+        color: black;
+      }
+      .time{
+        display: flex;
+        justify-content: center;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="head"><h1>Quiz Application</h1></div>
+    <div class="time">
+    <h2>Time Left : </h2>
+    <h2 id="timer">00</h2>
+    </div>
+    <div class="quiz-box">
+      <div id="ques" class="question"></div>
+
+      <div>
+        <div class="form-check option">
+          <input
+            onclick="enableNext()"
+            class="form-check-input"
+            type="radio"
+            name="answer"
+            id="option1"
+          />
+          <label class="form-check-label" id="opt1" for="option1"></label>
+        </div>
+        <div class="form-check option">
+          <input
+            class="form-check-input"
+            onclick="enableNext()"
+            type="radio"
+            name="answer"
+            id="option2"
+          />
+          <label class="form-check-label" for="option2" id="opt2"></label>
+        </div>
+        <div class="form-check option">
+          <input
+            class="form-check-input"
+            type="radio"
+            onclick="enableNext()"
+            name="answer"
+            id="option3"
+          />
+          <label class="form-check-label" for="option3" id="opt3"></label>
+        </div>
+
+        <div class="btn text-end mt-4">
+          <button
+            id="btn"
+            disabled
+            onclick="next()"
+            type="button"
+            class="btn btn-primary"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+      let btimer = document.getElementById('timer')
+      let jtimer = 0
+      let timerInterval = setInterval(function () {
+        jtimer++
+        btimer.innerHTML = jtimer
+    
+        if (jtimer === 100) {
+          clearInterval(timerInterval)
+          Swal.fire({
+            icon: "error",
+            title: "Time's Up!",
+            text: `Your test score is: ${score} / ${questions.length}`,
+            confirmButtonText: "Restart Quiz",
+            confirmButtonColor: "#d33",
+          }).then(() => {
+            location.reload()
+          })
+        }
+      }, 1000)
+    
+      var questions = [
+        {
+          question: "Q1 : What is the correct defination of array",
+          option1: "Collection of data",
+          option2: 'collection of object',
+          option3: 'collection of indexs',
+          correctOption: 'Collection of data',
+        },
+        {
+          question: "Q2 : Who is making the Web standards?",
+          option1: "Google",
+          option2: "The World Wide Web Consortium",
+          option3: "Microsoft",
+          correctOption: "The World Wide Web Consortium",
+        },
+        {
+          question: "Q3 : Choose the correct HTML element for the largest heading:",
+          option1: "<heading>",
+          option2: "<h6>",
+          option3: "<h1>",
+          correctOption: "<h1>",
+        },
+        {
+          question: "Q4 : What is the correct HTML element for inserting a line break?",
+          option1: "<linebreak>",
+          option2: "<br>",
+          option3: "<break>",
+          correctOption: "<br>",
+        },
+        {
+          question: "Q5 : What is the correct HTML for adding a background color?",
+          option1: '<body bg="yellow">',
+          option2: "<background>yellow</background>",
+          option3: '<body style="background-color:yellow;">',
+          correctOption: '<body style="background-color:yellow;">',
+        },
+        {
+          question: "Q6 : Choose the correct HTML element to define important text:",
+          option1: "<strong>",
+          option2: "<b>",
+          option3: "<i>",
+          correctOption: "<strong>",
+        },
+        {
+          question: "Q7 : Choose the correct HTML element to define emphasized text:",
+          option1: "<italic>",
+          option2: "<i>",
+          option3: "<em>",
+          correctOption: "<em>",
+        },
+        {
+          question: "Q8 : What is the correct HTML for creating a hyperlink?",
+          option1: "<a>http://www.w3schools.com</a>",
+          option2: '<a href="http://www.w3schools.com">W3Schools</a>',
+          option3: '<a url="http://www.w3schools.com">W3Schools.com</a>',
+          correctOption: '<a href="http://www.w3schools.com">W3Schools</a>',
+        },
+        {
+          question: "Q9 : What does HTML stand for?",
+          option1: "Hyperlinks and Text Markup Language",
+          option2: "Hypertext Markup Language",
+          option3: "Home Tool Markup Language",
+          correctOption: "Hypertext Markup Language",         
+        },
+      ];
+
+
+      
+    
+      var getQues = document.getElementById("ques");
+      var getOption1 = document.getElementById("opt1");
+      var getOption2 = document.getElementById("opt2");
+      var getOption3 = document.getElementById("opt3");
+      var index = 0;
+      var getBtn = document.getElementById("btn");
+      var score = 0;
+    
+      function next() {
+        var getInputs = document.getElementsByTagName("input");
+        let selectedOption = "";
+    
+        for (var i = 0; i < getInputs.length; i++) {
+          if (getInputs[i].checked) {
+            selectedOption = document.getElementById("opt" + (i + 1)).innerText;
+          }
+          getInputs[i].checked = false;
+        }
+    
+        // Score check
+        if (selectedOption === questions[index].correctOption) {
+          score++;
+        }
+    
+        index++;
+    
+        if (index >= questions.length) {
+          clearInterval(timerInterval); // stop timer
+          Swal.fire({
+            icon: "success",
+            title: "Quiz Completed!",
+            text: `Your score is: ${score} / ${questions.length}`,
+            confirmButtonText: "Restart Quiz",
+            confirmButtonColor: "red"
+          }).then(() => {
+            location.reload();
+          });
+        } else {
+          getQues.innerText = questions[index].question;
+          getOption1.innerText = questions[index].option1;
+          getOption2.innerText = questions[index].option2;
+          getOption3.innerText = questions[index].option3;
+          getBtn.disabled = true;
+        }
+      }
+    
+      function enableNext() {
+        getBtn.disabled = false;
+      }
+    
+      // Initial Question Load
+      getQues.innerText = questions[index].question;
+      getOption1.innerText = questions[index].option1;
+      getOption2.innerText = questions[index].option2;
+      getOption3.innerText = questions[index].option3;
+    </script>
+    
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+</html>
